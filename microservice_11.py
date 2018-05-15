@@ -28,7 +28,7 @@ def consulta_producto_catalogo():
             #)
 
 
-            db = MySQLdb.connect(host="35.199.86.113", user="root", passwd="root2018",  port=3306, db="microservice")        
+            db = MySQLdb.connect(host="microservices.c2v15my6uhyr.us-east-2.rds.amazonaws.com", user="root", passwd="uniandes1",  port=3306, db="microservices")        
             cur = db.cursor()
             query = ("SELECT * FROM productoxcatalogo WHERE id_catalogo = %s")
             cur.execute(query, [catalogo])
