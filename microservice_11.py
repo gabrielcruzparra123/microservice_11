@@ -21,11 +21,6 @@ def consulta_producto_catalogo():
 
             #dynamodb = boto3.client('dynamodb',aws_access_key_id=os.environ.get('aws_access_key_id'), aws_secret_access_key=os.environ.get('aws_access_key_secret'), region_name=os.environ.get('region'))
             catalogo = request.args.get('catalogo')
-            
-            #product = dynamodb.get_item(
-            #        TableName = "Product_Read",
-            #        Key= { "id_producto": {"N": str(product_id) } }
-            #)
 
 
             db = MySQLdb.connect(host="microservices.c2v15my6uhyr.us-east-2.rds.amazonaws.com", user="root", passwd="uniandes1",  port=3306, db="microservices")        
